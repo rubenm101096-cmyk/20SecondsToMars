@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bdgni7bj3kij0"]
+
+[ext_resource type="Script" uid="uid://n83toudqfrlf" path="res://UserInterface/PlayerInformation/player_information.gd" id="1_nrugs"]
+
+[node name="PlayerInformation" type="Control" unique_id=1970175914]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nrugs")
+
+[node name="TimerLabel" type="Label" parent="." unique_id=677314682]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 50
+text = "20:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DistanceLabel" type="Label" parent="." unique_id=1688241000]
+layout_mode = 1
+offset_left = 1560.0
+offset_right = 1920.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 50
+text = "225M Km"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VelocityLabel" type="Label" parent="." unique_id=540754887]
+layout_mode = 1
+offset_left = 1560.0
+offset_top = 120.0
+offset_right = 1920.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 50
+text = "5.00M Km/s"
+horizontal_alignment = 1
+vertical_alignment = 1

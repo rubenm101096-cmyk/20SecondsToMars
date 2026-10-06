@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cqiv7tx6f47gg"]
+
+[ext_resource type="Script" uid="uid://ceaitwjyns30y" path="res://MiniGames/minigame_test_1.gd" id="1_lxthr"]
+
+[node name="minigame_test_1" type="Node2D" unique_id=1240028417]
+script = ExtResource("1_lxthr")
+
+[node name="Button" type="Button" parent="." unique_id=1641413464]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 810.0
+offset_top = 480.0
+offset_right = 1110.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "click to win"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

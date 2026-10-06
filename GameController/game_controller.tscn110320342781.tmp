@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bb727s8e2tm1g"]
+
+[ext_resource type="Script" uid="uid://bbebiyulmegcq" path="res://GameController/game_controller.gd" id="1_3iy47"]
+[ext_resource type="PackedScene" uid="uid://cf8od0qfdppcs" path="res://StateMachine/state_machine.tscn" id="2_soqow"]
+
+[node name="GameController" type="Node" unique_id=1189339348]
+script = ExtResource("1_3iy47")
+initial_velocity = 5.0
+
+[node name="StateMachine" parent="." unique_id=187682614 instance=ExtResource("2_soqow")]
+
+[node name="Timer" type="Timer" parent="." unique_id=652619256]
+wait_time = 20.0
+one_shot = true

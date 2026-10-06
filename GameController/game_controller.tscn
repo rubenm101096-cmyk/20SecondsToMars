@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b611xg5w1ls81"]
+
+[ext_resource type="Script" uid="uid://bbebiyulmegcq" path="res://GameController/game_controller.gd" id="1_3iy47"]
+
+[node name="GameController" type="Node" unique_id=1189339348]
+script = ExtResource("1_3iy47")
+initial_velocity = 5.0

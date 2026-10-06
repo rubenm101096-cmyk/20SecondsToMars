@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bi6hl8dxh2qij"]
+
+[ext_resource type="Script" uid="uid://cm055xw27c2f4" path="res://UserInterface/GameSelector/game_selector_button.gd" id="1_2hd7v"]
+
+[node name="GameSelectorButton" type="Button" unique_id=307543447]
+anchors_preset = -1
+offset_left = -240.0
+offset_top = -120.0
+offset_right = 240.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "GAME"
+script = ExtResource("1_2hd7v")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

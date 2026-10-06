@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://3kll444tih18"]
+
+[ext_resource type="Script" uid="uid://7ucuqfabcfau" path="res://main_game.gd" id="1_ykeeq"]
+[ext_resource type="PackedScene" uid="uid://b4wbtuvp4wgtd" path="res://UserInterface/user_interface.tscn" id="1_yx7mw"]
+[ext_resource type="PackedScene" uid="uid://cf8od0qfdppcs" path="res://StateMachine/state_machine.tscn" id="2_ykeeq"]
+
+[node name="MainGame" type="Node2D" unique_id=1629081964]
+script = ExtResource("1_ykeeq")
+
+[node name="UserInterface" parent="." unique_id=1423126681 instance=ExtResource("1_yx7mw")]
+
+[node name="PlayerInformation" parent="UserInterface" index="0" unique_id=1970175914 node_paths=PackedStringArray("timer")]
+timer = NodePath("../../Timer")
+
+[node name="StateMachine" parent="." unique_id=187682614 node_paths=PackedStringArray("ui", "game") instance=ExtResource("2_ykeeq")]
+ui = NodePath("../UserInterface")
+game = NodePath("..")
+
+[node name="Timer" type="Timer" parent="." unique_id=739614748]
+one_shot = true
+
+[editable path="UserInterface"]
+[editable path="UserInterface/GameSelector"]

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://b4wbtuvp4wgtd"]
+
+[ext_resource type="Script" uid="uid://dbpg2js6lioa8" path="res://UserInterface/user_interface.gd" id="1_kxhmu"]
+[ext_resource type="PackedScene" uid="uid://bdgni7bj3kij0" path="res://UserInterface/PlayerInformation/player_information.tscn" id="2_v7due"]
+[ext_resource type="PackedScene" uid="uid://i16n41wlgukd" path="res://UserInterface/GameSelector/game_selector.tscn" id="3_mm0wo"]
+
+[node name="UserInterface" type="Control" unique_id=1423126681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kxhmu")
+
+[node name="PlayerInformation" parent="." unique_id=1970175914 instance=ExtResource("2_v7due")]
+layout_mode = 0
+
+[node name="LaunchButton" type="Button" parent="." unique_id=1927894105]
+visible = false
+layout_mode = 0
+offset_left = 900.0
+offset_top = 690.0
+offset_right = 1020.0
+offset_bottom = 750.0
+text = "LAUNCH"
+
+[node name="GameOver" type="Control" parent="." unique_id=941233992]
+visible = false
+anchors_preset = 0
+
+[node name="GameOverLabel" type="Label" parent="GameOver" unique_id=542440781]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 360.0
+offset_right = 1200.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOver" unique_id=1133950115]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 570.0
+offset_right = 1020.0
+offset_bottom = 630.0
+text = "RESTART"
+
+[node name="GameSelector" parent="." unique_id=663533046 instance=ExtResource("3_mm0wo")]
+visible = false
+layout_mode = 0
+
+[node name="Victory" type="Control" parent="." unique_id=1981053571]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ReplayButton" type="Button" parent="Victory" unique_id=1635605086]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 555.0
+offset_right = 1080.0
+offset_bottom = 675.0
+theme_override_font_sizes/font_size = 50
+text = "REPLAY"
+
+[node name="Label" type="Label" parent="Victory" unique_id=1961581056]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 285.0
+offset_right = 1365.0
+offset_bottom = 495.0
+theme_override_font_sizes/font_size = 50
+text = "CONGRATULATIONS, YOU WON!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="GameSelector"]

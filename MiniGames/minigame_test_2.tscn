@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c3xgoqv1tgjgx"]
+
+[ext_resource type="Script" uid="uid://w2gj8q4ft78a" path="res://MiniGames/minigame_test_2.gd" id="1_myico"]
+
+[node name="minigame_test_2" type="Node2D" unique_id=1384199225]
+script = ExtResource("1_myico")
+
+[node name="ButtonControl" type="Control" parent="." unique_id=1865206055]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 45.0
+offset_bottom = 45.0
+
+[node name="Button" type="Button" parent="ButtonControl" unique_id=1443127498]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 480.0
+offset_right = 720.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "button 1"
+
+[node name="Button2" type="Button" parent="ButtonControl" unique_id=1166356878]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 480.0
+offset_right = 1440.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "button 2"
