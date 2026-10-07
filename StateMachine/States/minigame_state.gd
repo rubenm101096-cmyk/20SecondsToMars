@@ -13,7 +13,7 @@ func update(delta) -> void:
 	ui.update(delta)
 
 func _on_minigame_finished() -> void:
-	transitioned.emit(selector_state)
+	transitioned.emit(double_or_nothing_state)
 
 func _on_Timer_finished() -> void:
 	transitioned.emit(gameover_state)

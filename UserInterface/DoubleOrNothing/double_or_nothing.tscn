@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cq4yq1fuqdlb1"]
+
+[ext_resource type="Script" uid="uid://bs44fuxh20pcy" path="res://UserInterface/DoubleOrNothing/double_or_nothing.gd" id="1_tsh0i"]
+
+[node name="DoubleOrNothing" type="Control" unique_id=2030880826]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsh0i")
+
+[node name="WinAmountLabel" type="Label" parent="." unique_id=1207178079]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 240.0
+offset_right = 1110.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 50
+text = "+10M Km/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DON_Button" type="Button" parent="." unique_id=1388797374]
+layout_mode = 0
+offset_left = 1560.0
+offset_top = 360.0
+offset_right = 1800.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 25
+text = "DOUBLE
+OR
+NOTHING"
+
+[node name="KeepWinningButton" type="Button" parent="." unique_id=87532820]
+layout_mode = 0
+offset_left = 1560.0
+offset_top = 600.0
+offset_right = 1800.0
+offset_bottom = 720.0
+theme_override_font_sizes/font_size = 25
+text = "KEEP
+CURRENT 
+WINNINGS"
+
+[connection signal="pressed" from="DON_Button" to="." method="_on_don_button_pressed"]
+[connection signal="pressed" from="KeepWinningButton" to="." method="_on_keep_winning_button_pressed"]

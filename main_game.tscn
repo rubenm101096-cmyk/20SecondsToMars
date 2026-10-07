@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://7ucuqfabcfau" path="res://main_game.gd" id="1_ykeeq"]
 [ext_resource type="PackedScene" uid="uid://b4wbtuvp4wgtd" path="res://UserInterface/user_interface.tscn" id="1_yx7mw"]
+[ext_resource type="PackedScene" uid="uid://chfkphpp4p5jf" path="res://UserInterface/Blur/blur_shader.tscn" id="2_6bm6p"]
 [ext_resource type="PackedScene" uid="uid://cf8od0qfdppcs" path="res://StateMachine/state_machine.tscn" id="2_ykeeq"]
 
 [node name="MainGame" type="Node2D" unique_id=1629081964]
 script = ExtResource("1_ykeeq")
+
+[node name="BlurShader" parent="." unique_id=693231251 instance=ExtResource("2_6bm6p")]
+visible = false
 
 [node name="UserInterface" parent="." unique_id=1423126681 instance=ExtResource("1_yx7mw")]
 

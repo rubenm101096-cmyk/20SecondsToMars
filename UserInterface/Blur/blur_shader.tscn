@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://chfkphpp4p5jf"]
+
+[ext_resource type="Shader" uid="uid://dclkspi6ha7oh" path="res://UserInterface/Blur/blur_shader.gdshader" id="1_0kyva"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x58mx"]
+shader = ExtResource("1_0kyva")
+shader_parameter/lod = 1.50000007125
+
+[node name="BlurShader" type="Control" unique_id=693231251]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Blur" type="ColorRect" parent="." unique_id=919987668]
+material = SubResource("ShaderMaterial_x58mx")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0

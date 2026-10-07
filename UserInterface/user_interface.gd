@@ -8,6 +8,7 @@ class_name user_interface
 @onready var selector: game_selector = $GameSelector
 @onready var victory: Control = $Victory
 @onready var replay_button: Button = $Victory/ReplayButton
+@onready var don: double_or_nothing = $DoubleOrNothing
 
 func _ready() -> void:
 	launch_button.hide()
@@ -28,6 +29,9 @@ func set_GameSelector_visibility(visible: bool) -> void:
 func set_Victory_visibility(visible: bool) -> void:
 	victory.set_visible(visible)
 
+func set_DoubleOrNothing_visibility(visible: bool) -> void:
+	don.set_visible(visible)
+
 func connect_to_LaunchButton(callable: Callable) -> void:
 	launch_button.pressed.connect(callable)
 
@@ -40,6 +44,9 @@ func connect_to_GameSelector(callable: Callable) -> void:
 func connect_to_ReplayButton(callable: Callable) -> void:
 	replay_button.pressed.connect(callable)
 
+func connect_to_DoubleOrNothing(callable: Callable) -> void:
+	don.connect_to_DoubleOrNothing(callable)
+
 func disconnect_from_LaunchButton(callable: Callable) -> void:
 	launch_button.pressed.disconnect(callable)
 
@@ -51,6 +58,9 @@ func disconnect_from_GameSelector(callable: Callable) -> void:
 
 func disconnect_from_ReplayButton(callable: Callable) -> void:
 	replay_button.pressed.disconnect(callable)
+
+func disconnect_from_DoubleOrNothing(callable: Callable) -> void:
+	don.disconnect_from_DoubleOrNothing(callable)
 
 func reset_player_information() -> void:
 	player_information.reset()

@@ -9,7 +9,7 @@ func _ready() -> void:
 		button.toggled.connect(_on_button_toggled.bind(button))
 
 func win() -> void:
-	GameController.modify_velocity_by(20.0)
+	GameController.current_winnings = 25.0
 	game_won.emit()
 
 func _on_button_toggled(toggled: bool, button: Button) -> void:

@@ -5,6 +5,7 @@ signal minigame_won
 
 @onready var timer: Timer = $Timer
 @onready var my_state_machine: state_machine = $StateMachine
+@onready var blur_shader: Control = $BlurShader
 
 var current_minigame: minigame = null
 
@@ -19,6 +20,7 @@ func set_new_minigame(new_minigame_scene: PackedScene):
 	current_minigame = new_minigame_scene.instantiate()
 	var main = get_tree().current_scene
 	main.add_child(current_minigame)
+	move_child(current_minigame, 0)
 	current_minigame.global_position = global_position
 	current_minigame.connect_to_minigame(_on_minigame_won)
 
@@ -34,8 +36,12 @@ func disconnect_from_timer_timeout(callable: Callable) -> void:
 func disconnect_from_minigame(callable: Callable) -> void:
 	minigame_won.disconnect(callable)
 
-func _on_minigame_won() -> void:
+func exit_minigame() -> void:
+	blur_shader.set_visible(false)
 	_dispose_current_minigame()
+
+func _on_minigame_won() -> void:
+	blur_shader.set_visible(true)
 	minigame_won.emit()
 
 func _on_voyage_completed() -> void:

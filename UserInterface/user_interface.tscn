@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dbpg2js6lioa8" path="res://UserInterface/user_interface.gd" id="1_kxhmu"]
 [ext_resource type="PackedScene" uid="uid://bdgni7bj3kij0" path="res://UserInterface/PlayerInformation/player_information.tscn" id="2_v7due"]
 [ext_resource type="PackedScene" uid="uid://i16n41wlgukd" path="res://UserInterface/GameSelector/game_selector.tscn" id="3_mm0wo"]
+[ext_resource type="PackedScene" uid="uid://cq4yq1fuqdlb1" path="res://UserInterface/DoubleOrNothing/double_or_nothing.tscn" id="4_cp462"]
 
 [node name="UserInterface" type="Control" unique_id=1423126681]
 layout_mode = 3
@@ -77,5 +78,9 @@ theme_override_font_sizes/font_size = 50
 text = "CONGRATULATIONS, YOU WON!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DoubleOrNothing" parent="." unique_id=2030880826 instance=ExtResource("4_cp462")]
+visible = false
+layout_mode = 1
 
 [editable path="GameSelector"]
