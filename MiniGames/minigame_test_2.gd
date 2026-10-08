@@ -10,7 +10,9 @@ func _ready() -> void:
 
 func win() -> void:
 	GameController.current_winnings = 25.0
-	game_won.emit()
+	game_finished.emit(true)
+
+func lose() -> void: pass
 
 func _on_button_toggled(toggled: bool, button: Button) -> void:
 	buttons[button] = toggled

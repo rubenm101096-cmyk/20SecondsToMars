@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cc0dqtchffwjc"]
+
+[ext_resource type="Script" uid="uid://b3efs1t70meur" path="res://MiniGames/MatchIcons/icon_screen.gd" id="1_7yere"]
+[ext_resource type="PackedScene" uid="uid://dcowop7hxar57" path="res://MiniGames/MatchIcons/icon.tscn" id="2_difql"]
+[ext_resource type="Texture2D" uid="uid://dncyr1ucty77j" path="res://MiniGames/MatchIcons/Icon_Resources/circle_test.png" id="3_hk3wl"]
+[ext_resource type="Texture2D" uid="uid://bdpmdfy04pqqm" path="res://MiniGames/MatchIcons/Icon_Resources/triangle_test.png" id="4_wpv5n"]
+[ext_resource type="Texture2D" uid="uid://cjuub1tmv61bl" path="res://MiniGames/MatchIcons/Icon_Resources/square_test.png" id="5_aan6i"]
+[ext_resource type="Texture2D" uid="uid://cg71ehypkiaif" path="res://MiniGames/MatchIcons/Icon_Resources/pentagon_test.png" id="6_i60mb"]
+
+[node name="IconScreen" type="Node2D" unique_id=133384016]
+script = ExtResource("1_7yere")
+
+[node name="Icon" parent="." unique_id=184498088 instance=ExtResource("2_difql")]
+visible = false
+texture = ExtResource("3_hk3wl")
+type = 1
+
+[node name="Icon2" parent="." unique_id=1001496538 instance=ExtResource("2_difql")]
+visible = false
+texture = ExtResource("4_wpv5n")
+type = 2
+
+[node name="Icon3" parent="." unique_id=1802705442 instance=ExtResource("2_difql")]
+visible = false
+texture = ExtResource("5_aan6i")
+type = 3
+
+[node name="Icon4" parent="." unique_id=2021267687 instance=ExtResource("2_difql")]
+visible = false
+texture = ExtResource("6_i60mb")
+type = 4

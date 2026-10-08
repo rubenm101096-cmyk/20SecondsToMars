@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dcowop7hxar57"]
+
+[ext_resource type="Script" uid="uid://w6e3u0ltf8cy" path="res://MiniGames/MatchIcons/icon.gd" id="2_caw0h"]
+
+[node name="Icon" type="Sprite2D" unique_id=184498088]
+script = ExtResource("2_caw0h")

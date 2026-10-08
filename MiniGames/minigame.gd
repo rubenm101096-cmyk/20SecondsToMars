@@ -1,12 +1,13 @@
 @abstract class_name minigame
 extends Node2D
 
-signal game_won
+signal game_finished(won: bool)
 
 func connect_to_minigame(callable: Callable) -> void:
-	game_won.connect(callable)
+	game_finished.connect(callable)
 
 func disconnect_from_minigame(callable: Callable) -> void:
-	game_won.disconnect(callable)
+	game_finished.disconnect(callable)
 
 @abstract func win() -> void
+@abstract func lose() -> void

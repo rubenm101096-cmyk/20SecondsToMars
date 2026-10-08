@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://pxc8jk0b5yua"]
+
+[ext_resource type="Script" uid="uid://c8q2ff8lkf8q" path="res://MiniGames/MatchIcons/match_icons_minigame.gd" id="1_etab0"]
+[ext_resource type="PackedScene" uid="uid://cc0dqtchffwjc" path="res://MiniGames/MatchIcons/icon_screen.tscn" id="2_kiwes"]
+[ext_resource type="PackedScene" uid="uid://cy6ks5mihu6d8" path="res://MiniGames/MatchIcons/icon_button.tscn" id="3_v5a6b"]
+
+[node name="MatchIcons_Minigame" type="Node2D" unique_id=1959515396]
+script = ExtResource("1_etab0")
+
+[node name="IconScreen" parent="." unique_id=133384016 instance=ExtResource("2_kiwes")]
+position = Vector2(1440, 360)
+
+[node name="IconButtons" type="Control" parent="." unique_id=1921291934]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="IconButton" parent="IconButtons" unique_id=736504473 instance=ExtResource("3_v5a6b")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 360.0
+offset_top = 480.0
+offset_right = 600.0
+offset_bottom = 600.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "CIRCLE"
+type = 1
+
+[node name="IconButton2" parent="IconButtons" unique_id=1417418152 instance=ExtResource("3_v5a6b")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 720.0
+offset_top = 480.0
+offset_right = 960.0
+offset_bottom = 600.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "TRIANGLE"
+type = 2
+
+[node name="IconButton3" parent="IconButtons" unique_id=1507135301 instance=ExtResource("3_v5a6b")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 360.0
+offset_top = 720.0
+offset_right = 600.0
+offset_bottom = 840.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "SQUARE"
+type = 3
+
+[node name="IconButton4" parent="IconButtons" unique_id=1838642061 instance=ExtResource("3_v5a6b")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 720.0
+offset_top = 720.0
+offset_right = 960.0
+offset_bottom = 840.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "PENTAGON"
+type = 4
+
+[node name="MatchButton" type="Button" parent="." unique_id=1783205765]
+offset_left = 1080.0
+offset_top = 600.0
+offset_right = 1320.0
+offset_bottom = 720.0
+theme_override_font_sizes/font_size = 30
+text = "MATCH"
+
+[connection signal="pressed" from="MatchButton" to="." method="_on_match_button_pressed"]

@@ -18,6 +18,9 @@ func _process(delta: float) -> void:
 func go_to_victory_state() -> void:
 	_transition_state(victory_state)
 
+func go_to_gameover_state() -> void:
+	_transition_state(gameover_state)
+
 func _transition_state(new_state_class: GDScript) -> void:
 	var new_state = new_state_class.new()
 	assert(new_state is state, "New state to transition has to be of class state")

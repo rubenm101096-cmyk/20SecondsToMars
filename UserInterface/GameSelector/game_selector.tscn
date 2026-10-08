@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5sxf3cv5n0kh" path="res://UserInterface/GameSelector/game_selector.gd" id="1_5knj4"]
 [ext_resource type="PackedScene" uid="uid://bi6hl8dxh2qij" path="res://UserInterface/GameSelector/game_selector_button.tscn" id="1_s1aen"]
-[ext_resource type="PackedScene" uid="uid://cqiv7tx6f47gg" path="res://MiniGames/minigame_test_1.tscn" id="3_jbxbp"]
+[ext_resource type="PackedScene" uid="uid://pxc8jk0b5yua" path="res://MiniGames/MatchIcons/match_icons_minigame.tscn" id="3_isuuv"]
 [ext_resource type="PackedScene" uid="uid://c3xgoqv1tgjgx" path="res://MiniGames/minigame_test_2.tscn" id="4_isuuv"]
 
 [node name="GameSelector" type="Control" unique_id=663533046]
@@ -10,7 +10,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_5knj4")
 
-[node name="TestButton1" parent="." unique_id=307543447 instance=ExtResource("1_s1aen")]
+[node name="MatchIconsButton" parent="." unique_id=307543447 instance=ExtResource("1_s1aen")]
 layout_mode = 0
 anchors_preset = 0
 offset_left = 300.0
@@ -19,8 +19,8 @@ offset_right = 780.0
 offset_bottom = 660.0
 grow_horizontal = 1
 grow_vertical = 1
-text = "TEST GAME 1"
-my_minigame = ExtResource("3_jbxbp")
+text = "MATCH ICONS"
+my_minigame = ExtResource("3_isuuv")
 
 [node name="TestButton2" parent="." unique_id=1527549751 instance=ExtResource("1_s1aen")]
 layout_mode = 0
