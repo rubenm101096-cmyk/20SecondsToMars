@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dkr7u8dupw35e"]
+
+[ext_resource type="Script" uid="uid://cknfbvv5hb52d" path="res://MiniGames/TileMap/tile.gd" id="1_3vjwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vjwq"]
+size = Vector2(240, 240)
+
+[node name="Tile" type="Sprite2D" unique_id=1719164834]
+script = ExtResource("1_3vjwq")
+
+[node name="TileArea" type="Area2D" parent="." unique_id=123925150]
+
+[node name="TileCollision" type="CollisionShape2D" parent="TileArea" unique_id=1055863513]
+shape = SubResource("RectangleShape2D_3vjwq")
+
+[connection signal="input_event" from="TileArea" to="." method="_on_tile_area_input_event"]

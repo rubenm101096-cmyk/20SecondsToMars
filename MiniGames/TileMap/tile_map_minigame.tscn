@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cy37y56orsgbk"]
+
+[ext_resource type="Script" uid="uid://cex7bdfoo8t46" path="res://MiniGames/TileMap/tile_map_minigame.gd" id="1_8woxh"]
+
+[node name="TileMap_Minigame" type="Node2D" unique_id=2013452645]
+script = ExtResource("1_8woxh")
+
+[node name="Marker" type="Marker2D" parent="." unique_id=429083976]
+position = Vector2(960, 540)

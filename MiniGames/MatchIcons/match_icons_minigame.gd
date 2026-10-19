@@ -1,6 +1,7 @@
 extends minigame
 class_name match_icons_minigame
 
+"Add this to JSON for scalability?"
 enum icon_type {NONE, CIRCLE, TRIANGLE, SQUARE, PENTAGON}
 
 @onready var screen: icon_screen = $IconScreen
